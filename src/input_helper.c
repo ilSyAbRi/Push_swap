@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:59:48 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/09 16:07:28 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/09 16:15:56 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	string_has_non_space_char(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (is_space_char == 0)
+		if (is_space_char(str[i]) == 0)
 			return 1;
 		i++;
 	}
