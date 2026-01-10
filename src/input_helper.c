@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:59:48 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/09 16:15:56 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/10 10:21:14 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 void	print_error()
 {
 	write(2,"Error\n",6);
+	exit(1);
 }
 
 void	validate_argument_count(int	argc)
 {
 	if (argc < 2)
-		exit(0);
+		exit(1);
 }
 
 int	is_space_char(char c)
