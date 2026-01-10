@@ -6,13 +6,13 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:47:04 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 19:41:58 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/10 19:58:55 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	one_sign_before_nb(char *str)
+int	check_sign(char *str)
 {
 	int	i;
 	int	count;
@@ -22,20 +22,16 @@ int	one_sign_before_nb(char *str)
 	while (str[i])
 	{
 		if (is_sign(str[i]))
-			count++;
-
-		if (count > 1)
-			return 0;
-		if (count == 1)
 		{
-			if (str[i + 1] != '\0' && is_number(str[i + 1]))
-				return 1;
-			else
-				return 0;
+			count++;
+			if (count > 1)
+				return (0);
+			if (!is_number(str[i + 1]))
+				return (0);
 		}
 		i++;
 	}
-	return 1;
+	return (1);
 }
 
 int	not_only_number(char *str)
@@ -68,17 +64,17 @@ int	fully_space(char *str)
 
 void	check_input(int argc, char *argv[])
 {
-	validate_argument_count(argc);
-
 	int	i;
 
+	if (argc < 2)
+		print_error();
 	i = 1;
 	while (i < argc)
 	{
 		if (fully_space(argv[i]) || not_only_number(argv[i]))
 			print_error();
-		//if (one_sign_before_nb(argv[i]) == 0)
-		//	print_error();
-	i++;
+		if (check_sign(argv[i]) == 0)
+			print_error();
+		i++;
 	}
 }
