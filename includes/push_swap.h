@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/09 15:44:27 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/10 10:18:53 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ void	check_input(int argc, char **argv);
 int		string_has_non_space_char(char *str);
 int		is_space_char(char c);
 void	validate_argument_count(int argc);
+void	print_error(void);
 
 #endif
