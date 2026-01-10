@@ -6,41 +6,41 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:59:48 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 10:21:14 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/10 18:43:52 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "push_swap.h"
 
-
-void	print_error()
+void	print_error(void)
 {
-	write(2,"Error\n",6);
+	write(2, "Error\n", 6);
 	exit(1);
 }
 
-void	validate_argument_count(int	argc)
+void	validate_argument_count(int argc)
 {
 	if (argc < 2)
 		exit(1);
 }
 
-int	is_space_char(char c)
+int	is_number(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\n')
+	if (c >= '0' && c <= '9')
 		return 1;
 	return 0;
 }
 
-int	string_has_non_space_char(char *str)
+int	is_whitespace(char c)
 {
-	int	i = 0;
+	if (c == ' ' || c >= 9 && c <= 13)
+		return (1);
+	return (0);
+}
 
-	while (str[i] != '\0')
-	{
-		if (is_space_char(str[i]) == 0)
-			return 1;
-		i++;
-	}
+int	is_sign(char c)
+{
+	if (c == '-' || c == '+')
+		return 1;
 	return 0;
 }
