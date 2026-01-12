@@ -6,13 +6,13 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:33:56 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:14:15 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:17:38 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-size_t	ft_count_word(const char *str, char c)
+size_t	ft_count_word(char *str, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -33,7 +33,7 @@ size_t	ft_count_word(const char *str, char c)
 	return (count);
 }
 
-size_t	ft_count_letter(const char *str, char c)
+size_t	ft_count_letter(char *str, char c)
 {
 	size_t	i;
 
@@ -74,7 +74,7 @@ char	*ft_allocate(char **arr, char *str, int n)
 	return (*arr);
 }
 
-char	**ft_split(char const *arr, char c)
+char	**ft_split(char *arr, char c)
 {
 	size_t	i;
 	size_t	j;
