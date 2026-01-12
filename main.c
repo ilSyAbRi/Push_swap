@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:45:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 19:40:26 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 21:47:02 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 int	main(int	argc, char *argv[])
 {
 	check_input(argc,argv);
+	set_up(argv,argc,0,0);
 }
