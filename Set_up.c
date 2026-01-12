@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 21:42:25 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 21:55:33 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	set_up(char **arr, int count, int i, int j)
 	ptr = malloc(sizeof(int) * count_element(arr, count));
 	if (ptr == NULL)
 		print_error();
-	while (i++ < count)
+	while (i < count)
 	{
 		numbers = ft_split(arr[i], ' ');
 		if (numbers == NULL)
@@ -97,6 +97,7 @@ int	set_up(char **arr, int count, int i, int j)
 			total++;
 		}
 		do_free(numbers, j);
+		i++;
 	}
 	return (1);
 }
