@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 11:35:54 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 16:54:05 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,29 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_node
-{
-	long			value;
-	int				rank;
-	struct s_node	*next;
-}					t_node;
+// input_helper.c
+void    print_error(void);
+void    validate_argument_count(int argc);
+int     is_number(char c);
+int     is_whitespace(char c);
+int     is_sign(char c);
 
-typedef struct s_stack
-{
-	t_node			*head;
-	int				size;
-}					t_stack;
+// input_checker.c
+int     one_sign_before_nb(char *str);
+int     only_number(char *str);
+int     fully_space(char *str);
+void    check_input(int argc, char *argv[]);
 
-//	check input
-void				check_input(int argc, char **argv);
 
-//	helper function
-int					string_has_non_space_char(char *str);
-int					is_space_char(char c);
-void				validate_argument_count(int argc);
-void				print_error(void);
+// ft_split.c
+size_t	ft_count_word(char *str, char c);
+size_t	ft_count_letter(char *str, char c);
+char	**do_free(char **ptr, size_t j);
+char	*ft_allocate(char **arr, char *str, int n);
+char	**ft_split(char *arr, char c);
+
+// ft_atol.c
+long	ft_atol(char *str);
+
 
 #endif
