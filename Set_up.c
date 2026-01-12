@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 17:39:20 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 18:16:15 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,31 @@ int	check_duplicate(char	*arr , int pos, int nb)
 void	Set_up(char	**arr,int	count)
 {
 	int	i;
+	int	j;
 	long	nb;
-	int	ptr[count + 1];
-	char	**result = ft_split(arr,' ');
+	int	keep;
+	int	ptr[1000];
+	char	**numbers;
 
 	i = 0;
+	keep = 0;
 	while (i < count)
 	{
-		nb = ft_atol(result[i]);
-		if (is_overflow(nb) || check_duplicate(result[i],i,nb))
+		numbers = ft_split(arr[i],' ');
+		j = 0;
+		keep = keep + j;
+		while (numbers[j])
 		{
-			do_free(result,count);
-			print_error();
+			nb = ft_atol(numbers[j]);
+			if (is_overflow(nb) || check_duplicate(ptr,j + keep,(int)nb))
+			{
+				do_free(result,count);
+				print_error();
+			}
+			ptr[j + keep] = (int)nb;
+		j++;
 		}
-		ptr[i] = (int)nb;
-		i++;
+		ptr[j + keep] = '\0';
+	i++;
 	}
-	ptr[i] = '\0'
 }
