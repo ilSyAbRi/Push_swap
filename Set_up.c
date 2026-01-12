@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 21:12:20 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 21:42:25 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ int	check_set_up(char **numbers, int *ptr, int j, int total)
 	return ((int)nb);
 }
 
-int	count_element(char **arr , int	count)
+int	count_element(char **arr, int count)
 {
 	int		i;
 	int		j;
-	int	total;
+	int		total;
 	char	**numbers;
 
 	total = 0;
@@ -59,8 +59,8 @@ int	count_element(char **arr , int	count)
 	while (i < count)
 	{
 		numbers = ft_split(arr[i], ' ');
-			if (numbers == NULL)
-				print_error();
+		if (numbers == NULL)
+			print_error();
 		j = 0;
 		while (numbers[j] != NULL)
 		{
@@ -73,20 +73,18 @@ int	count_element(char **arr , int	count)
 	return (total);
 }
 
-void	set_up(char **arr, int count)
+int	set_up(char **arr, int count, int i, int j)
 {
-	int		i;
-	int		j;
-	int		total;
 	int		*ptr;
 	char	**numbers;
+	int		total;
 
 	i = 0;
 	total = 0;
-	ptr = malloc(sizeof(int) * count_element(arr,count));
+	ptr = malloc(sizeof(int) * count_element(arr, count));
 	if (ptr == NULL)
 		print_error();
-	while (i < count)
+	while (i++ < count)
 	{
 		numbers = ft_split(arr[i], ' ');
 		if (numbers == NULL)
@@ -94,10 +92,11 @@ void	set_up(char **arr, int count)
 		j = 0;
 		while (numbers[j] != NULL)
 		{
-			ptr[total++] = check_set_up(numbers, ptr, j, total);
+			ptr[total] = check_set_up(numbers, ptr, j, total);
 			j++;
+			total++;
 		}
 		do_free(numbers, j);
-		i++;
 	}
+	return (1);
 }
