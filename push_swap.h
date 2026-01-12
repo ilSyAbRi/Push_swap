@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:54:05 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/12 21:45:14 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,11 @@ char	**ft_split(char *arr, char c);
 // ft_atol.c
 long	ft_atol(char *str);
 
+// Set_up.c
+int	set_up(char **arr, int count,int	i,int	j);
+int		count_element(char **arr, int count);
+int		check_set_up(char **numbers, int *ptr, int j, int total);
+int		check_duplicate(int *arr, int pos, int nb);
+int		is_overflow(long nb);
 
 #endif
