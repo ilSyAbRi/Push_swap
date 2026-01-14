@@ -6,11 +6,18 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/12 21:55:33 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/14 15:31:00 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+typedef struct counters
+{
+	int	i;
+	int	j;
+	int	total;
+}		t_counters;
 
 int	is_overflow(long nb)
 {
@@ -48,56 +55,55 @@ int	check_set_up(char **numbers, int *ptr, int j, int total)
 
 int	count_element(char **arr, int count)
 {
-	int		i;
-	int		j;
-	int		total;
-	char	**numbers;
+	char		**numbers;
+	t_counters	counter;
 
-	total = 0;
-	j = 0;
-	i = 0;
-	while (i < count)
+	counter.total = 0;
+	counter.j = 0;
+	counter.i = 0;
+	while (counter.i < count)
 	{
-		numbers = ft_split(arr[i], ' ');
+		numbers = ft_split(arr[counter.i], ' ');
 		if (numbers == NULL)
 			print_error();
-		j = 0;
-		while (numbers[j] != NULL)
+		counter.j = 0;
+		while (numbers[counter.j] != NULL)
 		{
-			total++;
-			j++;
+			counter.total++;
+			counter.j++;
 		}
-		do_free(numbers, j);
-		i++;
+		do_free(numbers, counter.j);
+		counter.i++;
 	}
-	return (total);
+	return (counter.total);
 }
 
-int	set_up(char **arr, int count, int i, int j)
+int	set_up(char **arr, int count)
 {
-	int		*ptr;
-	char	**numbers;
-	int		total;
+	int			*ptr;
+	char		**numbers;
+	t_counters	counter;
 
-	i = 0;
-	total = 0;
+	counter.i = 0;
+	counter.total = 0;
 	ptr = malloc(sizeof(int) * count_element(arr, count));
 	if (ptr == NULL)
 		print_error();
-	while (i < count)
+	while (counter.i < count)
 	{
-		numbers = ft_split(arr[i], ' ');
+		numbers = ft_split(arr[counter.i], ' ');
 		if (numbers == NULL)
 			print_error();
-		j = 0;
-		while (numbers[j] != NULL)
+		counter.j = 0;
+		while (numbers[counter.j] != NULL)
 		{
-			ptr[total] = check_set_up(numbers, ptr, j, total);
-			j++;
-			total++;
+			ptr[counter.total] = check_set_up(numbers, ptr, counter.j,
+					counter.total);
+			counter.j++;
+			counter.total++;
 		}
-		do_free(numbers, j);
-		i++;
+		do_free(numbers, counter.j);
+		counter.i++;
 	}
 	return (1);
 }
