@@ -6,11 +6,22 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 15:44:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/16 19:47:28 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/16 19:57:53 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	create_node(t_node **new, int nb)
+{
+	*new = malloc(sizeof(t_node));
+	if (*new == NULL)
+	{
+		print_error();
+	}
+	(*new)->val = nb;
+	(*new)->next = NULL;
+}
 
 t_node	*array_to_list(int *arr, int size)
 {
@@ -23,11 +34,7 @@ t_node	*array_to_list(int *arr, int size)
 	i = 0;
 	while (i < size)
 	{
-		new = malloc(sizeof(t_node));
-		if (new == NULL)
-			return (NULL);
-		new->val = arr[i];
-		new->next = NULL;
+		create_node(&new, arr[i]);
 		if (head == NULL)
 		{
 			head = new;
