@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/16 17:51:50 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/16 20:15:00 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,19 @@ char			**ft_split(char *arr, char c);
 // ft_atol.c
 long			ft_atol(char *str);
 
+// Set_up_helper.c
+int     convert_check_set_up(char **numbers, int *ptr, int j, int total);
+void    append_numbers(char **numbers, int *ptr, t_counters *counter);
+int     set_up(char **arr, int count);
+
 // Set_up.c
-int				set_up(char **arr, int count);
-int				count_element(char **arr, int count);
-int				check_duplicate(int *arr, int pos, int nb);
-int				convert_check_set_up(char **numbers, int *ptr, int j,
-					int total);
-int				is_overflow(long nb);
-void			append_numbers(char **numbers, int *ptr, t_counters *counter);
+void    create_node(t_node **new, int nb);
+t_node  *array_to_list(int *arr, int size);
+int     is_overflow(long nb);
+int     check_duplicate(int *arr, int pos, int nb);
+int     count_element(char **arr, int count);
+
+// sort_helper.c
+void	free_list(t_node *head);
 
 #endif
