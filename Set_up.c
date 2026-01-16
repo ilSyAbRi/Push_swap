@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/14 18:36:59 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/16 15:05:55 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ int	convert_check_set_up(char **numbers, int *ptr, int j, int total)
 
 void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 {
-	counter.j = 0;
-	while (numbers[counter.j] != NULL)
+	(*counter).j = 0;
+	while (numbers[(*counter).j] != NULL)
 	{
-		ptr[counter.total] = convert_check_set_up(numbers, ptr, counter.j,
-				counter.total);
-		counter.j++;
-		counter.total++;
+		ptr[(*counter).total] = convert_check_set_up(numbers, ptr, (*counter).j,
+				(*counter).total);
+		(*counter).j++;
+		(*counter).total++;
 	}
 }
 
