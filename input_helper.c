@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:59:48 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 19:55:06 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:03:07 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	is_number(char c)
 
 int	is_whitespace(char c)
 {
-	if (c == ' ' || c >= 9 && c <= 13)
+	if (c == ' ' || (c >= 9 && c <= 13))
 		return (1);
 	return (0);
 }
