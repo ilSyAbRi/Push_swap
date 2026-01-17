@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 10:35:50 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:01:23 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,14 @@ char			**ft_split(char *arr, char c);
 long			ft_atol(char *str);
 
 // Set_up_helper.c
+
+void			create_node(t_node *head, t_node **new, int nb);
 int				convert_check_set_up(char **numbers, int *ptr, int j,
 					int total);
 void			append_numbers(char **numbers, int *ptr, t_counters *counter);
 t_node			*set_up(char **arr, int count);
 
 // Set_up.c
-void			create_node(t_node **new, int nb);
 t_node			*array_to_list(int *arr, int size);
 int				is_overflow(long nb);
 int				check_duplicate(int *arr, int pos, int nb);
