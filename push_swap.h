@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 11:01:23 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:12:29 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ typedef struct list
 	int			val;
 	struct list	*next;
 }				t_node;
+
+// main.c
+int				main(int argc, char *argv[]);
 
 // input_helper.c
 void			print_error(void);
