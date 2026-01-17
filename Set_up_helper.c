@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 15:44:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/16 20:31:01 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:06:00 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	create_node(t_node *head, t_node **new, int nb)
 	if (*new == NULL)
 	{
 		free_list(head);
-		print_error();
+		exist(1);
 	}
 	(*new)->val = nb;
 	(*new)->next = NULL;
@@ -84,7 +84,7 @@ int	count_element(char **arr, int count)
 	{
 		numbers = ft_split(arr[counter.i], ' ');
 		if (numbers == NULL)
-			print_error();
+			exist(1);
 		counter.j = 0;
 		while (numbers[counter.j] != NULL)
 		{

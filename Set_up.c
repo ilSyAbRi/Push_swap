@@ -6,35 +6,45 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 12:49:41 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:18:32 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	convert_check_set_up(char **numbers, int *ptr, int j, int total)
+int	ft_strlen(char *str)
 {
-	long	nb;
+	int	i;
 
-	nb = ft_atol(numbers[j]);
-	if (is_overflow(nb) || check_duplicate(ptr, total, (int)nb))
-	{
-		do_free(numbers, j);
-		free(ptr);
-		print_error();
-	}
-	return ((int)nb);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
 void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 {
+	long	nb;
+	int		track;
+
+	track = 0;
 	(*counter).j = 0;
 	while (numbers[(*counter).j] != NULL)
 	{
-		ptr[(*counter).total] = convert_check_set_up(numbers, ptr, (*counter).j,
-				(*counter).total);
+		if (ft_strlen(numbers[j]) > 11)
+			track = 1;
+		nb = ft_atol(numbers[j]);
+		if (is_overflow(nb) || check_duplicate(ptr, total, (int)nb))
+			track = 1;
+		ptr[(*counter).total] = nb;
 		(*counter).j++;
 		(*counter).total++;
+	}
+	if (track == 1)
+	{
+		do_free(numbers, j);
+		free(ptr);
+		print_error();
 	}
 }
 
@@ -49,14 +59,14 @@ t_node	*set_up(char **arr, int count)
 	counter.total = 0;
 	ptr = malloc(sizeof(int) * count_element(arr, count));
 	if (ptr == NULL)
-		print_error();
+		exit(1);
 	while (counter.i < count)
 	{
 		numbers = ft_split(arr[counter.i], ' ');
 		if (numbers == NULL)
 		{
 			free(ptr);
-			print_error();
+			exit(1);
 		}
 		append_numbers(numbers, ptr, &counter);
 		do_free(numbers, counter.j);
