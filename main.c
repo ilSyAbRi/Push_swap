@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:45:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 11:02:29 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:11:41 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ void	print_list(t_node *list)
 	printf("\n");
 }
 
-void	push_swap(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	t_node	*a;
 
 	check_input(argc, argv);
 	a = set_up(argv, argc);
 	print_list(a);
+	return (0);
 }
