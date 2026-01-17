@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 12:07:22 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:49:41 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	convert_check_set_up(char **numbers, int *ptr, int j, int total)
 	if (is_overflow(nb) || check_duplicate(ptr, total, (int)nb))
 	{
 		do_free(numbers, j);
+		free(ptr);
 		print_error();
 	}
 	return ((int)nb);
@@ -53,7 +54,10 @@ t_node	*set_up(char **arr, int count)
 	{
 		numbers = ft_split(arr[counter.i], ' ');
 		if (numbers == NULL)
+		{
+			free(ptr);
 			print_error();
+		}
 		append_numbers(numbers, ptr, &counter);
 		do_free(numbers, counter.j);
 		counter.i++;
