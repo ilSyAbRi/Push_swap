@@ -6,7 +6,7 @@
 #    By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 05:26:56 by ilsyabri          #+#    #+#              #
-#    Updated: 2026/01/17 11:18:02 by ilsyabri         ###   ########.fr        #
+#    Updated: 2026/01/17 11:50:29 by ilsyabri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,18 +22,20 @@ SRC =	main.c \
 		sort_helper.c
 
 OBJ = $(SRC:.c=.o)
-NAME = push_swap.a
+NAME = push_swap
 CFLAG = -Wall -Wextra -Werror
 
 all : $(NAME) 
 
-$(NAME) : $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+$(NAME)	: $(OBJ)
+	cc $(CFLAG) $(OBJ) -o $(NAME)
 
-%.o : %.c
-	cc $(CFLAG) -c $< -o $@
-clean :
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
 	rm -f $(OBJ)
+
 fclean : clean
 	rm -f $(NAME)
 
