@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:47:04 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/10 19:58:55 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:10:12 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void	check_input(int argc, char *argv[])
 	int	i;
 
 	if (argc < 2)
-		print_error();
+		exit(1);
 	i = 1;
 	while (i < argc)
 	{
