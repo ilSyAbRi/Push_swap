@@ -6,13 +6,13 @@
 #    By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 05:26:56 by ilsyabri          #+#    #+#              #
-#    Updated: 2026/01/12 16:19:51 by ilsyabri         ###   ########.fr        #
+#    Updated: 2026/01/17 10:58:46 by ilsyabri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 
-SRC =	main.c \
+SRC =	push_swap.c \
 		ft_split.c \
 		input_checker.c \
 		input_helper.c
