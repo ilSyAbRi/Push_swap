@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/16 15:05:55 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 10:23:57 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 	}
 }
 
-int	set_up(char **arr, int count)
+t_node	*set_up(char **arr, int count)
 {
 	int			*ptr;
 	char		**numbers;
 	t_counters	counter;
+	t_node		*a;
 
 	counter.i = 0;
 	counter.total = 0;
@@ -57,5 +58,7 @@ int	set_up(char **arr, int count)
 		do_free(numbers, counter.j);
 		counter.i++;
 	}
-	return (1);
+	a = array_to_list(ptr, counter.total);
+	free(ptr);
+	return (a);
 }
