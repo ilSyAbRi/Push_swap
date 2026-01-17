@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 11:34:45 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:07:22 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_node	*set_up(char **arr, int count)
 	t_counters	counter;
 	t_node		*a;
 
-	counter.i = 0;
+	counter.i = 1;
 	counter.total = 0;
 	ptr = malloc(sizeof(int) * count_element(arr, count));
 	if (ptr == NULL)
