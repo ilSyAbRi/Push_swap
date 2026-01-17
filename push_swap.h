@@ -6,9 +6,10 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 15:35:33 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:43:49 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
@@ -18,56 +19,55 @@
 
 typedef struct counters
 {
-	int			i;
-	int			j;
-	int			total;
-}				t_counters;
+	int	i;
+	int	j;
+	int	total;
+}	t_counters;
 
 typedef struct list
 {
 	int			val;
 	struct list	*next;
-}				t_node;
+}	t_node;
 
-// main.c
-int				main(int argc, char *argv[]);
+// main 		*^*
+int		main(int argc, char *argv[]);
 
-// input_helper.c
-void			print_error(void);
-void			validate_argument_count(int argc);
-int				is_number(char c);
-int				is_whitespace(char c);
-int				is_sign(char c);
+// input_helper 	&|&
+void	print_error(void);
+int		is_number(char c);
+int		is_whitespace(char c);
+int		is_sign(char c);
 
-// input_checker.c
-int				one_sign_before_nb(char *str);
-int				only_number(char *str);
-int				fully_space(char *str);
-void			check_input(int argc, char *argv[]);
+// input_checker	^!^
+int		check_sign(char *str);
+int		not_only_number(char *str);
+int		fully_space(char *str);
+void	check_input(int argc, char *argv[]);
 
-// ft_split.c
-size_t			ft_count_word(char *str, char c);
-size_t			ft_count_letter(char *str, char c);
-char			**do_free(char **ptr, size_t j);
-char			*ft_allocate(char **arr, char *str, int n);
-char			**ft_split(char *arr, char c);
+// ft_split		*&*
+size_t	ft_count_word(char *str, char c);
+size_t	ft_count_letter(char *str, char c);
+char	**do_free(char **ptr, size_t j);
+char	*ft_allocate(char **arr, char *str, int n);
+char	**ft_split(char *arr, char c);
 
-// ft_atol.c
-long			ft_atol(char *str);
+// ft_atol		^#^
+long	ft_atol(char *str);
 
-// Set_up.c
-int				ft_strlen(char *str);
-void			append_numbers(char **numbers, int *ptr, t_counters *counter);
-t_node			*set_up(char **arr, int count);
+// set_up		'|'
+int		ft_strlen(char *str);
+void	append_numbers(char **numbers, int *ptr, t_counters *counter);
+t_node	*set_up(char **arr, int count);
 
-// Set_up_helper.c
-void			create_node(t_node *head, t_node **new, int nb);
-t_node			*array_to_list(int *arr, int size);
-int				is_overflow(long nb);
-int				check_duplicate(int *arr, int pos, int nb);
-int				count_element(char **arr, int count);
+// set_up_helper	*(*
+void	create_node(t_node *head, t_node **new, int nb);
+t_node	*array_to_list(int *arr, int size);
+int		is_overflow(long nb);
+int		check_duplicate(int *arr, int pos, int nb);
+int		count_element(char **arr, int count);
 
-// sort_helper.c
-void			free_list(t_node *head);
+// sort helper		*)*
+void	free_list(t_node *head);
 
 #endif
