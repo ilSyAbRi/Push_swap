@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 11:12:29 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 11:24:02 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 typedef struct counters
 {
-	int			i;
-	int			j;
-	int			total;
+	size_t		i;
+	size_t		j;
+	size_t		total;
 }				t_counters;
 
 typedef struct list
