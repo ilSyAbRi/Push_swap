@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:45:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 11:11:41 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 12:26:40 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int	main(int argc, char *argv[])
 	check_input(argc, argv);
 	a = set_up(argv, argc);
 	print_list(a);
+	free_list(a);
 	return (0);
 }
