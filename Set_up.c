@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 15:18:32 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/17 15:28:05 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 	(*counter).j = 0;
 	while (numbers[(*counter).j] != NULL)
 	{
-		if (ft_strlen(numbers[j]) > 11)
+		if (ft_strlen(numbers[(*counter).j]) > 11)
 			track = 1;
-		nb = ft_atol(numbers[j]);
-		if (is_overflow(nb) || check_duplicate(ptr, total, (int)nb))
+		nb = ft_atol(numbers[(*counter).j]);
+		if (is_overflow(nb) || check_duplicate(ptr, (*counter).total, (int)nb))
 			track = 1;
 		ptr[(*counter).total] = nb;
 		(*counter).j++;
@@ -42,7 +42,7 @@ void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 	}
 	if (track == 1)
 	{
-		do_free(numbers, j);
+		do_free(numbers, (*counter).j);
 		free(ptr);
 		print_error();
 	}
