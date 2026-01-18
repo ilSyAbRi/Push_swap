@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 15:43:49 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/18 16:28:11 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ t_node			*array_to_list(int *arr, int size);
 int				is_overflow(long nb);
 int				check_duplicate(int *arr, int pos, int nb);
 int				count_element(char **arr, int count);
+
+//	swap		0-0
+void    sa(t_node **a);
+void    sb(t_node **b);
+void    ss(t_node **a, t_node **b);
 
 // sort helper		*)*
 void			free_list(t_node *head);
