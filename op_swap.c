@@ -6,9 +6,11 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/18 16:26:37 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/19 17:00:53 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/19 20:11:49 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void	sa(t_node **a)
 {
