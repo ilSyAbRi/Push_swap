@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/20 10:30:13 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/20 10:41:13 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:50:56 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 void	ra(t_node **a)
 {
 	t_node	*tmp;
-	t_node	*current;
 
 	if (a == NULL)
 		return ;
-	tmp = (*a)->next;
-	*a = (*a)->next;
-	current = *a;
-	while (current->next != NULL)
-		current = current->next;
+	tmp = (*a);
 	tmp->next = NULL;
-	current = tmp;
-	*a = current;
+	*a = (*a)->next;
+	while ((*a)->next != NULL)
+		*a = (*a)->next;
+	*a = tmp;
 }
 
 void	rb(t_node **b);
