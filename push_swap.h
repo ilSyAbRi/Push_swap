@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/20 10:29:37 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/20 11:58:21 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,9 @@ char			**ft_split(char *arr, char c);
 
 // ft_atol		^#^
 long			ft_atol(char *str);
+
+// ft_strlen		(:
+int				ft_strlen(char *str);
 
 // set_up		'|'
 int				ft_strlen(char *str);

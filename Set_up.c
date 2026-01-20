@@ -6,21 +6,11 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 16:59:39 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 15:28:05 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/20 11:56:06 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 void	append_numbers(char **numbers, int *ptr, t_counters *counter)
 {
