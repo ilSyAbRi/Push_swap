@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/19 17:11:24 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/20 10:29:37 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,11 @@ void			ss(t_node **a, t_node **b);
 //	op_push		>*<
 void			pa(t_node **a, t_node **b);
 void			pb(t_node **a, t_node **b);
+
+//	op_rotate
+void			ra(t_node **a);
+void			rb(t_node **b);
+void			rr(t_node **a, t_node **b);
 
 // sort helper		*)*
 void			free_list(t_node *head);
