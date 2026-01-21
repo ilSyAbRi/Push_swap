@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 19:48:38 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 20:24:34 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	stack_size(t_node **stack)
 	int		count;
 
 	count = 0;
-	current = *a;
+	current = *stack;
 	while (current != NULL)
 	{
 		current = current->next;
