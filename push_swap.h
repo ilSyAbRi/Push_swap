@@ -84,9 +84,9 @@ void			rb(t_node **b);
 void			rr(t_node **a, t_node **b);
 
 //	op_reverse_rotate
-void    rra(t_node **a);
-void    rrb(t_node **b);
-void    rrr(t_node **a, t_node **b);
+void			rra(t_node **a);
+void			rrb(t_node **b);
+void			rrr(t_node **a, t_node **b);
 
 // sort helper		*)*
 void			free_list(t_node *head);

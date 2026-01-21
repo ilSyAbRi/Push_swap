@@ -6,9 +6,11 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:13:42 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 16:15:13 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 16:19:00 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 void	rra(t_node **a)
 {
@@ -27,10 +29,11 @@ void	rra(t_node **a)
 	*a = last;
 	prev->next = NULL;
 }
+
 void	rrb(t_node **b)
 {
-	t_node *last;
-	t_node *prev;
+	t_node	*last;
+	t_node	*prev;
 
 	if (b == NULL || *b == NULL || (*b)->next == NULL)
 		return ;
@@ -44,6 +47,7 @@ void	rrb(t_node **b)
 	*b = last;
 	prev->next = NULL;
 }
+
 void	rrr(t_node **a, t_node **b)
 {
 	rra(a);
