@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/20 11:58:21 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 15:14:22 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,11 @@ void			pb(t_node **a, t_node **b);
 void			ra(t_node **a);
 void			rb(t_node **b);
 void			rr(t_node **a, t_node **b);
+
+//	op_reverse_rotate
+void    rra(t_node **a);
+void    rrb(t_node **b);
+void    rrr(t_node **a, t_node **b);
 
 // sort helper		*)*
 void			free_list(t_node *head);
