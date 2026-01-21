@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 18:10:57 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 18:43:46 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct counters
 typedef struct list
 {
 	int			val;
+	int			index;
 	struct list	*next;
 }				t_node;
 
@@ -69,21 +70,21 @@ int				is_overflow(long nb);
 int				check_duplicate(int *arr, int pos, int nb);
 int				count_element(char **arr, int count);
 
-//	op_swap		0-0
+// op_swap		0-0
 void			sa(t_node **a);
 void			sb(t_node **b);
 void			ss(t_node **a, t_node **b);
 
-//	op_push		>*<
+// op_push		>*<
 void			pa(t_node **a, t_node **b);
 void			pb(t_node **a, t_node **b);
 
-//	op_rotate
+// op_rotate		}:
 void			ra(t_node **a);
 void			rb(t_node **b);
 void			rr(t_node **a, t_node **b);
 
-//	op_reverse_rotate
+// op_reverse_rotate	{:
 void			rra(t_node **a);
 void			rrb(t_node **b);
 void			rrr(t_node **a, t_node **b);
