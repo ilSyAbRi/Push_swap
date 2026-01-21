@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 18:10:05 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 18:23:48 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	free_list(t_node *head)
 	}
 }
 
-int	stack_size(t_node **a)
+int	stack_size(t_node **stack)
 {
 	t_node	*current;
 	int		count;
