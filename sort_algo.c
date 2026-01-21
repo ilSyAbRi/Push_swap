@@ -1,40 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_helper.c                                      :+:      :+:    :+:   */
+/*   sort_algo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 18:10:05 by ilsyabri         ###   ########.fr       */
+/*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
+/*   Updated: 2026/01/21 18:11:27 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	free_list(t_node *head)
+void sort_stack(t_node **a, t_node **b)
 {
-	t_node	*tmp;
 
-	while (head != NULL)
-	{
-		tmp = head->next;
-		free(head);
-		head = tmp;
-	}
-}
-
-int	stack_size(t_node **a)
-{
-	t_node	*current;
-	int		count;
-
-	count = 0;
-	current = *a;
-	while (current != NULL)
-	{
-		current = current->next;
-		count++;
-	}
-	return (count);
 }
