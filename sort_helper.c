@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 19:04:33 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 19:48:38 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,23 @@ int	stack_size(t_node **stack)
 
 void	assign_index(t_node **stack)
 {
+	int		index;
+	t_node	*current;
+	t_node	*tmp;
 
+	current = *stack;
+	tmp = *stack;
+	while (current)
+	{
+		index = 0;
+		tmp = *stack;
+		while (tmp)
+		{
+			if (current->val > tmp->val)
+				index++;
+			tmp = tmp->next;
+		}
+		current->index = index;
+		current = current->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 18:43:46 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/21 19:49:14 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,6 @@ void			rrr(t_node **a, t_node **b);
 // sort helper		*)*
 void			free_list(t_node *head);
 int				stack_size(t_node **a);
+void			assign_index(t_node **stack);
 
 #endif
