@@ -12,13 +12,13 @@
 
 #include "push_swap.h"
 
-void    push_chunks(t_node **a, t_node **b, int total)
+void	push_chunks(t_node **a, t_node **b, int total)
 {
-	int	index;
-	int	track;
+	int		index;
+	int		track;
 	t_node	*current;
 
-	index = total -1;
+	index = total - 1;
 	while (index >= 0)
 	{
 		track = 0;
@@ -27,14 +27,14 @@ void    push_chunks(t_node **a, t_node **b, int total)
 		{
 			if (current->index == index)
 			{
-				write(1,"pb\n",3);
-				pb(a,b);
+				write(1, "pb\n", 3);
+				pb(a, b);
 				track = 1;
-				break;
+				break ;
 			}
 			current = current->next;
 		}
 		if (!track)
-		index--;
+			index--;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/22 16:01:15 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/22 16:48:49 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ void	sort_stack(t_node **a, t_node **b)
 		number_of_chunks = 1;
 	chunk_size = total / number_of_chunks;
 	assign_index(a);
-	push_chunks(a,b,total);
 }

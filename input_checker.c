@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:47:04 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/17 12:10:12 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/22 19:05:48 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,12 @@
 int	check_sign(char *str)
 {
 	int	i;
-	int	count;
 
 	i = 0;
-	count = 0;
 	while (str[i])
 	{
 		if (is_sign(str[i]))
 		{
-			count++;
-			if (count > 1)
-				return (0);
 			if (!is_number(str[i + 1]))
 				return (0);
 		}

@@ -98,6 +98,6 @@ void			assign_index(t_node **stack);
 void			sort_stack(t_node **a, t_node **b);
 
 // chunk
-void    push_chunks(t_node **a, t_node **b, int total);
+void			push_chunks(t_node **a, t_node **b, int total);
 
 #endif
