@@ -6,7 +6,7 @@
 #    By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 05:26:56 by ilsyabri          #+#    #+#              #
-#    Updated: 2026/01/21 18:11:42 by ilsyabri         ###   ########.fr        #
+#    Updated: 2026/01/22 13:57:22 by ilsyabri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRC =	main.c \
 		op_swap.c \
 		op_reverse_rotate.c \
 		sort_helper.c \
-		sort_algo.c
+		sort_algo.c \
+		chunk.c
 
 OBJ = $(SRC:.c=.o)
 NAME = push_swap
