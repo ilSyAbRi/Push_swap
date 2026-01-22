@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/22 13:57:51 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/22 15:57:02 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,6 @@ void			assign_index(t_node **stack);
 void			sort_stack(t_node **a, t_node **b);
 
 // chunk
-void    push_chunks(t_node **a, t_node **b, int chunk_size);
+void    push_chunks(t_node **a, t_node **b, int total);
 
 #endif
