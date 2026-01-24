@@ -12,6 +12,31 @@
 
 #include "push_swap.h"
 
+void	dispatch_function (t_node **a, t_node **b,int	chunk_size)
+{
+	int	pos = 0;
+	int	add = 0;
+
+	while (*a != NULL)
+	{
+		if ((*a)->index >= (pos + add) && (*a)->index <= (chunk_size + add))
+		{
+			pb(a,b);
+			add++;
+		}
+		else if ((*a)->index <= (pos + add))
+		{
+			pb(a,b);
+			rb(a,b);
+		}
+		else if ((*a)->index >= (chunk_size + add))
+		{
+			ra(a,b);
+		}
+	current = current->next;
+	}
+}
+
 void	sort_stack(t_node **a, t_node **b)
 {
 	int	total;
