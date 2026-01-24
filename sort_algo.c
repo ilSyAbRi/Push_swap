@@ -27,20 +27,20 @@ void	sorted_to_a(t_node **a, t_node **b,int	total)
 		{
 			if (count <= size)
 			{
-				while (count >= 0)
+				while (count > 0)
 				{
-					write(1,"rb\n",2);
+					write(1,"rb\n",3);
 					rb(b);
 				count--;
 				}
-				write(1,"pb\n",2);
+				write(1,"pb\n",3);
 				pb(b);
 			}
 			else if (count >= size)
 			{
-				while (count <= total -1)
+				while (count < total -1)
 				{
-					write(1,"rb\n",3);
+					write(1,"rrb\n",4);
 					rrb(b);
 				count++;
 				}
@@ -48,7 +48,7 @@ void	sorted_to_a(t_node **a, t_node **b,int	total)
 				pb(b);
 			}
 			count = 0;
-			size--;
+			max--;
 		}
 		count++;
 	}
