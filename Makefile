@@ -25,8 +25,7 @@ SRC =	main.c \
 		op_swap.c \
 		op_reverse_rotate.c \
 		sort_helper.c \
-		sort_algo.c \
-		chunk.c
+		sort_algo.c
 
 OBJ = $(SRC:.c=.o)
 NAME = push_swap
