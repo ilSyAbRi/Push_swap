@@ -12,6 +12,48 @@
 
 #include "push_swap.h"
 
+void	sorted_to_a(t_node **a, t_node **b,int	total)
+{
+	int	max;
+	int	count;
+	int	size;
+
+	count = 0;
+	max = total -1;
+	size = total / 2;
+	while (*b != NULL)
+	{
+		if ((*b)->index == max)
+		{
+			if (count <= size)
+			{
+				while (count >= 0)
+				{
+					write(1,"rb\n",2);
+					rb(b);
+				count--;
+				}
+				write(1,"pb\n",2);
+				pb(b);
+			}
+			else if (count >= size)
+			{
+				while (count <= total -1)
+				{
+					write(1,"rb\n",3);
+					rrb(b);
+				count++;
+				}
+				write(1,"pb\n",3);
+				pb(b);
+			}
+			count = 0;
+			size--;
+		}
+		count++;
+	}
+}
+
 void	do_operation(t_node **a , t_node **b , int *add , int track)
 {
 	if (track == 1)
@@ -65,4 +107,5 @@ void	sort_stack(t_node **a, t_node **b)
 	else
 		chunks_size = 45;
 	dispatch_function(a,b,chunk_size);
+	sorted_to_a(a,b,total);
 }
