@@ -64,5 +64,5 @@ void	sort_stack(t_node **a, t_node **b)
 		chunks_size = 20;
 	else
 		chunks_size = 45;
-	dispatch_function(a,b);
+	dispatch_function(a,b,chunk_size);
 }
