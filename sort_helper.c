@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 20:24:34 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/25 13:56:47 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,26 @@ void	free_list(t_node *head)
 		free(head);
 		head = tmp;
 	}
+}
+
+void	is_sorted(t_node **a)
+{
+	t_node	*current;
+
+	current = *a;
+	if (a == NULL || *a == NULL || (*a)->next == NULL)
+	{
+		free_list(a);
+		exit(1);
+	}
+	while (current != NULL && current->next != NULL)
+	{
+		if (current->index > current->next->index)
+			return ;
+		current = current->next;
+	}
+	free_list(a);
+	exit(1);
 }
 
 int	stack_size(t_node **stack)
