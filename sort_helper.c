@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/25 13:56:47 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/25 18:54:43 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	is_sorted(t_node **a)
 	current = *a;
 	if (a == NULL || *a == NULL || (*a)->next == NULL)
 	{
-		free_list(a);
+		free_list(*a);
 		exit(1);
 	}
 	while (current != NULL && current->next != NULL)
@@ -40,7 +40,7 @@ void	is_sorted(t_node **a)
 			return ;
 		current = current->next;
 	}
-	free_list(a);
+	free_list(*a);
 	exit(1);
 }
 

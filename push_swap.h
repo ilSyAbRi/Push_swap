@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/22 15:57:02 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/25 15:00:43 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,8 +93,13 @@ void			rrr(t_node **a, t_node **b);
 void			free_list(t_node *head);
 int				stack_size(t_node **a);
 void			assign_index(t_node **stack);
+void			is_sorted(t_node **a);
 
 // sort algo		"_"
 void			sort_stack(t_node **a, t_node **b);
+void			dispatch_function1(t_node **a, t_node **b, int chunk_size);
+void			dispatch_function2(t_node **a, t_node **b, int total);
+void			do_operation1(t_node **a, t_node **b, int *add, int track);
+void			do_operation2(t_node **a, t_node **b, int *count, int *total);
 
 #endif
