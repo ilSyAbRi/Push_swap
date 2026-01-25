@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/25 13:33:06 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/25 13:33:51 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	do_operation2(t_node **a, t_node **b, int *count, int *total)
 	}
 	else if ((*count) > size)
 	{
-		while ((*count) < total - 1)
+		while ((*count) < *total - 1)
 		{
 			write(1, "rrb\n", 4);
 			rrb(b);
