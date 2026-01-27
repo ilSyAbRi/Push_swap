@@ -6,35 +6,35 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/25 19:05:16 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/27 14:05:35 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	do_operation2(t_node **a, t_node **b, int *count, int *total)
+void	do_operation2(t_node **a, t_node **b, int count, int total)
 {
 	int	size;
 
-	size = *total / 2;
-	if (*count <= size)
+	size = total / 2;
+	if (count <= size)
 	{
-		while (*count > 0)
+		while (count > 0)
 		{
 			write(1, "rb\n", 3);
 			rb(b);
-			(*count)--;
+			count--;
 		}
 		write(1, "pa\n", 3);
 		pa(a, b);
 	}
-	else if ((*count) > size)
+	else if (count > size)
 	{
-		while ((*count) < *total - 1)
+		while (count < (total - 1))
 		{
 			write(1, "rrb\n", 4);
 			rrb(b);
-			(*count)++;
+			count++;
 		}
 		write(1, "pa\n", 3);
 		pa(a, b);
@@ -43,25 +43,28 @@ void	do_operation2(t_node **a, t_node **b, int *count, int *total)
 
 void	dispatch_function2(t_node **a, t_node **b, int total)
 {
-	int	max;
-	int	count;
+	int		max;
+	int		count;
 	t_node	*tmp;
 
 	count = 0;
 	max = total - 1;
 	tmp = *b;
-	while (*tmp != NULL)
+	while (tmp != NULL)
 	{
-		if ((*tmp)->index == max)
+		if (tmp->index == max)
 		{
-			do_operation2(a, *tmp, &count, &total);
+			do_operation2(a, b, count, total);
 			count = 0;
 			total--;
 			max--;
-			tmp = b;
+			tmp = *b;
 		}
-		*tmp = (*tmp)->next;
-		count++;
+		else
+		{
+			tmp = tmp->next;
+			count++;
+		}
 	}
 }
 
