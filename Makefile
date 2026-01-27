@@ -6,7 +6,7 @@
 #    By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 05:26:56 by ilsyabri          #+#    #+#              #
-#    Updated: 2026/01/27 19:41:42 by ilsyabri         ###   ########.fr        #
+#    Updated: 2026/01/27 20:10:38 by ilsyabri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,10 +35,10 @@ CFLAG = -Wall -Wextra -Werror
 all : $(NAME) 
 
 $(NAME)	: $(OBJ)
-	cc $(CFLAGS) $(OBJ) -o $(NAME)
+	cc $(CFLAG) $(OBJ) -o $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAG) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

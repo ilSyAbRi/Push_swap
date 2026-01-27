@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/27 19:44:31 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/27 20:12:20 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	operation_b_to_a(t_node **a, t_node **b, int max_index,
 	pa(a, b);
 }
 
-void	from_b_to_a(t_node **a, t_node **b, int chunk_size)
+void	from_b_to_a(t_node **a, t_node **b)
 {
 	int	max_index;
 	int	pos_of_max_index;
@@ -74,10 +74,8 @@ void	operation_a_to_b(t_node **a, t_node **b, int track)
 
 void	from_a_to_b(t_node **a, t_node **b, int chunks_size)
 {
-	int	i;
 	int	pos;
 
-	i = 0;
 	pos = 0;
 	while (*a != NULL)
 	{
@@ -110,5 +108,5 @@ void	sort_stack(t_node **a, t_node **b)
 	else
 		chunks_size = 45;
 	from_a_to_b(a, b, chunks_size);
-	from_b_to_a(a, b, chunks_size);
+	from_b_to_a(a, b);
 }
