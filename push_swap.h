@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/27 17:21:15 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/27 19:39:51 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,13 +96,17 @@ void			free_list(t_node *head);
 int				stack_size(t_node **a);
 void			assign_index(t_node **stack);
 void			is_sorted(t_node **a);
-int				find_max(t_node *b);
+int				find_max_index(t_node *b);
+
+// sort helper2
+int				find_pos_of_max_index(t_node *tmp, int max_index);
 
 // sort algo		"_"
 void			sort_stack(t_node **a, t_node **b);
-void			dispatch_function1(t_node **a, t_node **b, int chunk_size);
-void			dispatch_function2(t_node **a, t_node **b, int total);
-void			do_operation1(t_node **a, t_node **b, int *add, int track);
-void			do_operation2(t_node **a, t_node **b, int count, int total);
+void			from_a_to_b(t_node **a, t_node **b, int chunks_size);
+void			operation_a_to_b(t_node **a, t_node **b, int track);
+void			from_b_to_a(t_node **a, t_node **b, int chunk_size);
+void			operation_b_to_a(t_node **a, t_node **b, int max_index,
+					int pos_of_max_index);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/02 05:26:56 by ilsyabri          #+#    #+#              #
-#    Updated: 2026/01/25 18:56:35 by ilsyabri         ###   ########.fr        #
+#    Updated: 2026/01/27 19:41:42 by ilsyabri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRC =	main.c \
 		op_swap.c \
 		op_reverse_rotate.c \
 		sort_helper.c \
+		sort_helper2.c \
 		sort_algo.c
 
 OBJ = $(SRC:.c=.o)

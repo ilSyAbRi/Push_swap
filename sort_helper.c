@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 20:05:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/25 18:54:43 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/27 17:31:41 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,22 @@ void	free_list(t_node *head)
 	}
 }
 
+int	find_max_index(t_node *b)
+{
+	int	max;
+
+	if (b == NULL)
+		return (-1);
+	max = b->index;
+	while (b != NULL)
+	{
+		if (b->index > max)
+			max = b->index;
+		b = b->next;
+	}
+	return (max);
+}
+
 void	is_sorted(t_node **a)
 {
 	t_node	*current;
@@ -36,7 +52,7 @@ void	is_sorted(t_node **a)
 	}
 	while (current != NULL && current->next != NULL)
 	{
-		if (current->index > current->next->index)
+		if (current->val > current->next->val)
 			return ;
 		current = current->next;
 	}

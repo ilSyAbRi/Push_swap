@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sort_helper2.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/09 15:45:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/27 19:44:44 by ilsyabri         ###   ########.fr       */
+/*   Created: 2026/01/27 18:55:34 by ilsyabri          #+#    #+#             */
+/*   Updated: 2026/01/27 19:42:01 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-void	print_list(t_node *list)
+int	find_pos_of_max_index(t_node *tmp, int max_index)
 {
-	while (list != NULL)
+	int	index;
+
+	index = 0;
+	while (tmp != NULL)
 	{
-		printf("%d ", list->val);
-		list = list->next;
+		if (tmp->index == max_index)
+			return (index);
+		index++;
+		tmp = tmp->next;
 	}
-	printf("\n");
-}
-
-int	main(int argc, char *argv[])
-{
-	t_node	*a;
-	t_node	*b;
-
-	b = NULL;
-	check_input(argc, argv);
-	a = set_up(argv, argc);
-	is_sorted(&a);
-	sort_stack(&a, &b);
-	print_list(a);
-	free_list(a);
-	free_list(b);
-	return (0);
+	return (-1);
 }
