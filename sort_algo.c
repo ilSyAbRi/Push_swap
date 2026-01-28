@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/27 20:12:20 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/28 17:43:32 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,13 @@ void	sort_stack(t_node **a, t_node **b)
 		chunks_size = 20;
 	else
 		chunks_size = 45;
-	from_a_to_b(a, b, chunks_size);
-	from_b_to_a(a, b);
+	if (total == 5)
+		sort_5(a, b);
+	else if (total == 3)
+		sort_3(a);
+	else
+	{
+		from_a_to_b(a, b, chunks_size);
+		from_b_to_a(a, b);
+	}
 }

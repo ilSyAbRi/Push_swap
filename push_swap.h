@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/28 15:58:35 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/28 17:14:43 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ int				find_max_index(t_node *b);
 // sort helper2		*?*
 int				find_pos_of_max_index(t_node *tmp, int max_index);
 int				find_min_index(t_node *tmp);
+int				find_pos_of_min_index(t_node *tmp, int min_index);
 
 // sort small		`^`
 void			sort_3(t_node **stack);
