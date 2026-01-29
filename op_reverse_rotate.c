@@ -28,6 +28,7 @@ void	rra(t_node **a)
 	last->next = *a;
 	*a = last;
 	prev->next = NULL;
+		write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b)
@@ -46,10 +47,12 @@ void	rrb(t_node **b)
 	last->next = *b;
 	*b = last;
 	prev->next = NULL;
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_node **a, t_node **b)
 {
 	rra(a);
 	rrb(b);
+	write(1, "rrr\n", 4);
 }

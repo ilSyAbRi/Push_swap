@@ -26,6 +26,7 @@ void	ra(t_node **a)
 	while (current->next != NULL)
 		current = current->next;
 	current->next = tmp;
+		write(1, "ra\n", 3);
 }
 
 void	rb(t_node **b)
@@ -42,10 +43,12 @@ void	rb(t_node **b)
 	while (current->next != NULL)
 		current = current->next;
 	current->next = tmp;
+		write(1, "rb\n", 3);
 }
 
 void	rr(t_node **a, t_node **b)
 {
 	ra(a);
 	rb(b);
+		write(1, "rr\n", 3);
 }

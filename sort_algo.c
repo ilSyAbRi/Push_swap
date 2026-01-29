@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/28 17:43:32 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/28 20:06:29 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,11 @@ void	operation_b_to_a(t_node **a, t_node **b, int max_index,
 
 	size_of_stack = stack_size(b);
 	if (pos_of_max_index <= (size_of_stack / 2))
-	{
 		while ((*b)->index != max_index)
-		{
-			write(1, "rb\n", 3);
 			rb(b);
-		}
-	}
 	else
-	{
 		while ((*b)->index != max_index)
-		{
-			write(1, "rrb\n", 4);
 			rrb(b);
-		}
-	}
-	write(1, "pa\n", 3);
 	pa(a, b);
 }
 
@@ -54,19 +43,11 @@ void	from_b_to_a(t_node **a, t_node **b)
 void	operation_a_to_b(t_node **a, t_node **b, int track)
 {
 	if (track == 1)
-	{
-		write(1, "pa\n", 3);
 		pb(a, b);
-	}
 	else if (track == 2)
-	{
-		write(1, "ra\n", 3);
 		ra(a);
-	}
 	else
 	{
-		write(1, "pa\n", 3);
-		write(1, "rb\n", 3);
 		pb(a, b);
 		rb(b);
 	}

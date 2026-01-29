@@ -22,6 +22,7 @@ void	sa(t_node **a)
 	*a = (*a)->next;
 	tmp->next = (*a)->next;
 	(*a)->next = tmp;
+		write(1, "sa\n", 3);
 }
 
 void	sb(t_node **b)
@@ -34,10 +35,13 @@ void	sb(t_node **b)
 	*b = (*b)->next;
 	tmp->next = (*b)->next;
 	(*b)->next = tmp;
+		write(1, "sb\n", 3);
 }
 
 void	ss(t_node **a, t_node **b)
 {
 	sa(a);
 	sb(b);
+		write(1, "ss\n", 3);
 }
+
