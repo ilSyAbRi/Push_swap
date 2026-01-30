@@ -35,5 +35,5 @@ void	pb(t_node **a, t_node **b)
 	*a = (*a)->next;
 	tmp->next = *b;
 	*b = tmp;
-		write(1, "pb\n", 3);
+	write(1, "pb\n", 3);
 }

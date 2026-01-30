@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/28 20:06:12 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/30 03:10:58 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ typedef struct list
 	int			index;
 	struct list	*next;
 }				t_node;
-
-void			print_list(t_node *list);
 
 // main 		*^*
 int				main(int argc, char *argv[]);
@@ -105,7 +103,8 @@ int				find_pos_of_min_index(t_node *tmp, int min_index);
 
 // sort small		`^`
 void			sort_3(t_node **stack);
-void			sort_5(t_node **stack_a, t_node **stack_b);
+void			sort_2(t_node **stack);
+void			small_than_5(t_node **stack_a, t_node **stack_b);
 
 // sort algo		"_"
 void			sort_stack(t_node **a, t_node **b);

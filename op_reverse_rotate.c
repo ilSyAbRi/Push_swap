@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:13:42 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/21 16:19:00 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/30 02:53:29 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	rra(t_node **a)
 	last->next = *a;
 	*a = last;
 	prev->next = NULL;
-		write(1, "rra\n", 4);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_node **b)
@@ -50,9 +50,9 @@ void	rrb(t_node **b)
 	write(1, "rrb\n", 4);
 }
 
-void	rrr(t_node **a, t_node **b)
+/*void	rrr(t_node **a, t_node **b)
 {
 	rra(a);
 	rrb(b);
 	write(1, "rrr\n", 4);
-}
+}*/
