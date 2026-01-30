@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 17:56:41 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/30 01:51:44 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/30 04:13:49 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	operation_b_to_a(t_node **a, t_node **b, int max_index,
 	int	size_of_stack;
 
 	size_of_stack = stack_size(b);
-	if (pos_of_max_index <= (size_of_stack / 2))
+	if (pos_of_max_index < (size_of_stack / 2))
 		while ((*b)->index != max_index)
 			rb(b);
 	else
@@ -85,9 +85,9 @@ void	sort_stack(t_node **a, t_node **b)
 	total = stack_size(a);
 	assign_index(a);
 	if (total <= 100)
-		chunks_size = 20;
+		chunks_size = 15;
 	else
-		chunks_size = 45;
+		chunks_size = 35;
 	if (total == 2)
 		sort_2(a);
 	else if (total <= 5)

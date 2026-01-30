@@ -6,7 +6,7 @@
 /*   By: ilsyabri <ilsyabri@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 15:43:43 by ilsyabri          #+#    #+#             */
-/*   Updated: 2026/01/30 03:10:58 by ilsyabri         ###   ########.fr       */
+/*   Updated: 2026/01/30 03:20:10 by ilsyabri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,8 @@ int				count_element(char **arr, int count);
 
 // op_swap		0-0
 void			sa(t_node **a);
-void			sb(t_node **b);
-void			ss(t_node **a, t_node **b);
+//void			sb(t_node **b);
+//void			ss(t_node **a, t_node **b);
 
 // op_push		>*<
 void			pa(t_node **a, t_node **b);
@@ -82,12 +82,12 @@ void			pb(t_node **a, t_node **b);
 // op_rotate		}:
 void			ra(t_node **a);
 void			rb(t_node **b);
-void			rr(t_node **a, t_node **b);
+//void			rr(t_node **a, t_node **b);
 
 // op_reverse_rotate	{:
 void			rra(t_node **a);
 void			rrb(t_node **b);
-void			rrr(t_node **a, t_node **b);
+// void			rrr(t_node **a, t_node **b);
 
 // sort helper		*)*
 void			free_list(t_node *head);
