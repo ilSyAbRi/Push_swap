@@ -12,3 +12,9 @@ Compile with `make` and run with `./push_swap 3 2 1`.
 - https://push-swap42-visualizer.vercel.app/
 - https://medium.com/@jamierobertdawson/push-swap-the-least-amount-of-moves-with-two-stacks-d1e76a71789a
 - ChatGPT was used to help explain and debug the project.
+
+
+
+## File
+This PDF contains the subject of the `push_swap`
+- [push_swap.pdf](./push_swap.pdf)
